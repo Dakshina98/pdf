@@ -24,7 +24,7 @@ def summarize_text(llm, text, summary_type):
         prompt = f"Give a summary of the text in 3 bullet points: {text}"
 
     response = llm.complete(prompt)
-    return response
+    return response.text
 
 def extract_text_from_pdf(pdf_file):
     text = ""
